@@ -1,0 +1,201 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Get $750 in your CashApp Account</title>
+    <style>
+        /* Global styles */
+        body {
+            margin: 0;
+            font-family: Arial, sans-serif;
+            background: #00C853; /* CashApp green */
+            color: #fff;
+            overflow-x: hidden;
+        }
+
+        h1 {
+            text-align: center;
+            font-size: 3rem;
+            padding: 20px;
+            animation: bounce 2s infinite;
+        }
+
+        /* Bouncing animation */
+        @keyframes bounce {
+            0%, 20%, 50%, 80%, 100% {
+                transform: translateY(0);
+            }
+            40% {
+                transform: translateY(-10px);
+            }
+            60% {
+                transform: translateY(-5px);
+            }
+        }
+
+        /* Email input form styling */
+        .email-form {
+            text-align: center;
+            margin: 50px 0;
+        }
+
+        .email-input {
+            padding: 10px;
+            font-size: 1.2rem;
+            border: 2px solid #fff;
+            border-radius: 5px;
+            background: transparent;
+            color: #fff;
+            margin-right: 10px;
+            transition: 0.3s;
+        }
+
+        .email-input:focus {
+            border-color: #00C853;
+            box-shadow: 0 0 5px #00C853;
+        }
+
+        .get-started-btn {
+            background: #fff;
+            color: #00C853;
+            font-size: 1.5rem;
+            padding: 15px 30px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s;
+            animation: pulse 1.5s infinite;
+        }
+
+        .get-started-btn:hover {
+            background: #00C853;
+            color: #fff;
+        }
+
+        /* Pulse animation */
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+
+        /* Countdown timer */
+        .countdown {
+            text-align: center;
+            font-size: 2rem;
+            margin-top: 20px;
+        }
+
+        /* Popup Notification */
+        .popup {
+            position: fixed;
+            top: 20px;
+            right: 20px;
+            background: #fff;
+            color: #00C853;
+            padding: 15px;
+            border-radius: 5px;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+            display: none;
+        }
+
+        /* Social proof */
+        .social-proof {
+            text-align: center;
+            margin-top: 30px;
+        }
+
+        .social-proof p {
+            font-size: 1.2rem;
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2rem;
+            }
+
+            .email-input, .get-started-btn {
+                font-size: 1rem;
+            }
+
+            .get-started-btn {
+                width: 100%;
+                padding: 10px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- CashApp Logo -->
+    <div style="text-align: center; margin-top: 50px;">
+        <img src="https://i.ibb.co/26B14PB/d5bacf40e364.gif" alt="CashApp Logo" width="100">
+    </div>
+
+    <!-- Heading -->
+    <h1>Get $750 Directly in Your CashApp Account!</h1>
+
+    <!-- Email Input Form -->
+    <div class="email-form">
+        <input type="email" id="email" class="email-input" placeholder="Enter Your Email" required>
+        <button class="get-started-btn" onclick="submitEmail()">Get Started</button>
+    </div>
+
+    <!-- Social Proof -->
+    <div class="social-proof">
+        <p>7238 people have already claimed their gift!</p>
+    </div>
+
+    <!-- Countdown Timer -->
+    <div class="countdown">
+        <p id="timer">Offer ends in: <span id="time"></span></p>
+    </div>
+
+    <!-- Popup Notification -->
+    <div class="popup" id="popup">
+        You have successfully claimed your offer!
+    </div>
+
+    <script>
+        // Countdown Timer
+        const endTime = new Date().getTime() + 3600 * 1000 * 24; // 1 day countdown
+        const timerElement = document.getElementById('time');
+        setInterval(function() {
+            const currentTime = new Date().getTime();
+            const remainingTime = endTime - currentTime;
+            if (remainingTime > 0) {
+                const hours = Math.floor(remainingTime / (1000 * 60 * 60));
+                const minutes = Math.floor((remainingTime % (1000 * 60 * 60)) / (1000 * 60));
+                const seconds = Math.floor((remainingTime % (1000 * 60)) / 1000);
+                timerElement.innerHTML = `${hours}h ${minutes}m ${seconds}s`;
+            } else {
+                timerElement.innerHTML = 'Offer has expired';
+            }
+        }, 1000);
+
+        // Email Submission & Redirection
+        function submitEmail() {
+            const email = document.getElementById('email').value;
+            if (email) {
+                window.location.href = `https://go4affm.com/c/?p=40201&o=20853&subid=1234&email=${email}`;
+            }
+        }
+
+        // Popup Notification
+        function showPopup() {
+            const popup = document.getElementById('popup');
+            popup.style.display = 'block';
+            setTimeout(() => popup.style.display = 'none', 3000);
+        }
+    </script>
+
+</body>
+</html>
